@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // =======================
     // Contact Form
-    // =======================
+
     const contactForm = document.getElementById("contactForm");
 
     if (contactForm) {
@@ -29,9 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // =======================
+
     // Welcome Message
-    // =======================
+    
     const header = document.querySelector("header");
 
     if (header) {
@@ -41,9 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
         header.appendChild(welcome);
     }
 
-    // =======================
+    
     // To-Do List
-    // =======================
     const taskInput = document.getElementById("taskInput");
     const addTaskBtn = document.getElementById("addTaskBtn");
     const taskList = document.getElementById("taskList");
@@ -111,9 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     displayTasks();
 
-    // =======================
+    
     // Dark/Light Mode
-    // =======================
+
     const themeBtn =
         document.getElementById("themeToggle") ||
         document.getElementById("theme-toggle");
