@@ -4,109 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Albert Namasaka Profile</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background: #007bff;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
-
-        nav {
-            background: #333;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            color: #00bcd4;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        section {
-            background: white;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .profile-image {
-            width: 150px;
-            border-radius: 50%;
-        }
-
-        .gallery {
-            display: flex;
-            gap: 10px;
-        }
-
-        .gallery img {
-            width: 30%;
-            border-radius: 8px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        table, th, td {
-            border: 1px solid #ccc;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        input, textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            background: #007bff;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #0056b3;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #333;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -114,14 +12,18 @@
 <header>
     <h1>Albert Namasaka</h1>
     <p>Information Technology Student | Full-Stack Developer</p>
+    <button id="themeToggle">🌙 Dark Mode</button>
 </header>
 
 <nav>
     <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#gallery">Gallery</a>
+    <a href="#audio">Audio</a>
+    <a href="#video">Video</a>
     <a href="#hobbies">Hobbies</a>
     <a href="#skills">Skills</a>
+    <a href="#todo">To-Do</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -129,12 +31,19 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <img src="images/myphoto.jpg" class="profile-image">
-        <p>I am an IT student at Masinde Muliro University.</p>
+        <img src="images/myphoto.jpg"
+             alt="Albert Namasaka"
+             class="profile-image">
+
+        <p>
+            I am an Information Technology student at MMUST and a
+            passionate Full-Stack Developer.
+        </p>
     </section>
 
     <section id="education">
         <h2>Education</h2>
+
         <table>
             <tr>
                 <th>Institution</th>
@@ -143,7 +52,7 @@
             </tr>
             <tr>
                 <td>MMUST</td>
-                <td>Information Technology</td>
+                <td>BSc Information Technology</td>
                 <td>Current Student</td>
             </tr>
         </table>
@@ -151,15 +60,35 @@
 
     <section id="gallery">
         <h2>Gallery</h2>
+
         <div class="gallery">
-            <img src="images/myphoto.jpg">
-            <img src="images/myphoto.jpg">
-            <img src="images/myphoto.jpg">
+            <img src="images/myphoto.jpg" alt="Photo 1">
+            <img src="images/myphoto.jpg" alt="Photo 2">
+            <img src="images/myphoto.jpg" alt="Photo 3">
         </div>
+    </section>
+
+    <section id="audio">
+        <h2>Favorite Audio</h2>
+
+        <audio controls>
+            <source src="media/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section id="video">
+        <h2>Introduction Video</h2>
+
+        <video width="600" controls>
+            <source src="media/Video.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
     </section>
 
     <section id="hobbies">
         <h2>Hobbies</h2>
+
         <ul>
             <li>Coding</li>
             <li>Reading</li>
@@ -170,6 +99,7 @@
 
     <section id="skills">
         <h2>Skills</h2>
+
         <ol>
             <li>HTML</li>
             <li>CSS</li>
@@ -179,21 +109,50 @@
         </ol>
     </section>
 
+    <section id="todo">
+        <h2>To-Do List</h2>
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter a task">
+
+        <button id="addTaskBtn">
+            Add Task
+        </button>
+
+        <ul id="taskList"></ul>
+    </section>
+
     <section id="contact">
         <h2>Contact Me</h2>
 
         <form id="contactForm">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea rows="5" placeholder="Message" required></textarea>
-            <button type="submit">Send</button>
+            <input
+                type="text"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="email"
+                placeholder="Email"
+                required>
+
+            <textarea
+                rows="5"
+                placeholder="Message"
+                required></textarea>
+
+            <button type="submit">
+                Send
+            </button>
         </form>
     </section>
 
 </main>
 
 <footer>
-    <p>&copy; 2026 Albert Namasaka</p>
+    <p>&copy; 2026 Albert Namasaka. All Rights Reserved.</p>
 </footer>
 
 <script src="script.js"></script>
